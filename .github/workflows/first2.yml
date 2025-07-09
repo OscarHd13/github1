@@ -1,0 +1,25 @@
+name: first
+
+on: # Esta línea debe estar al mismo nivel que 'name:'
+  push # Esta línea debe tener 2 espacios de indentación
+
+jobs:
+  job1:
+    name: First job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step one
+        uses: actions/checkout@v2 # 'uses' debe estar indentado 2 espacios bajo el '- name'
+      - name: Step two
+        run: env | sort # 'run' debe estar indentado 2 espacios bajo el '- name'
+  job2: # 'job2' debe estar al mismo nivel que 'job1'
+    name: Second job
+    runs-on: windows-latest
+    steps:
+      - name: Step one
+        uses: actions/checkout@v2 # 'uses' debe estar indentado 2 espacios bajo el '- name'
+      - name: Step two
+        run: "Get-ChildItem Env: | Sort-Object Name" # 'run' debe estar indentado 2 espacios bajo el '- name'
+
+
+
