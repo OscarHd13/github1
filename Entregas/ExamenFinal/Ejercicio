@@ -97,6 +97,7 @@ public class BuscaMinas {
         } else {
             System.out.println("¡Felicidades, has ganado!");
             System.out.println("Minas pisadas: " + minasPisadas);
+            system.out.println("Casillas descubiertas: " + casillasDescubiertas);
         }
     }
 }
