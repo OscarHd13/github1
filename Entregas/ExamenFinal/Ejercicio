@@ -96,6 +96,7 @@ public class BuscaMinas {
             System.out.println("Has perdido.");
         } else {
             System.out.println("¡Felicidades, has ganado!");
+            System.out.println("Minas pisadas: " + minasPisadas);
         }
     }
 }
